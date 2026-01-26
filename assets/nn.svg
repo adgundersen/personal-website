@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="627.191" height="588" viewBox="0 0 627.191 588">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke: #000;
+      }
+
+      .cls-2 {
+        stroke-linecap: square;
+      }
+
+      .cls-3 {
+        fill: #ff9b45;
+      }
+
+      .cls-4 {
+        fill: #8eff64;
+      }
+
+      .cls-5 {
+        fill: #40daff;
+      }
+
+      .cls-6 {
+        font-size: 12px;
+        font-family: HelveticaNeue-Bold, Helvetica Neue;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <g id="Group_20" data-name="Group 20" transform="translate(-13354.404 329.5)">
+    <path id="Rectangle_48" data-name="Rectangle 48" class="cls-1" d="M37,0h0A37,37,0,0,1,74,37V63a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V37A37,37,0,0,1,37,0Z" transform="translate(13594 -82)"/>
+    <path id="Rectangle_50" data-name="Rectangle 50" class="cls-1" d="M100,0H270A100,100,0,0,1,370,100v62a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V100A100,100,0,0,1,100,0Z" transform="translate(13446 -181)"/>
+    <line id="Line_2" data-name="Line 2" class="cls-1" x1="44.669" transform="translate(13497.145 -18.833)"/>
+    <line id="Line_3" data-name="Line 3" class="cls-1" x1="44.669" transform="translate(13571.238 -18.833)"/>
+    <line id="Line_4" data-name="Line 4" class="cls-1" x1="44.669" transform="translate(13645.333 -18.833)"/>
+    <line id="Line_5" data-name="Line 5" class="cls-1" x1="44.669" transform="translate(13719.427 -18.833)"/>
+    <path id="Path_15" data-name="Path 15" class="cls-1" d="M10826.5-710.657" transform="translate(2692.979 529.703)"/>
+    <path id="Rectangle_49" data-name="Rectangle 49" class="cls-1" d="M70,0h83a70,70,0,0,1,70,70v33a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V70A70,70,0,0,1,70,0Z" transform="translate(13520 -122)"/>
+    <path id="Rectangle_53" data-name="Rectangle 53" class="cls-2" d="M140,0H452A140,140,0,0,1,592,140V310a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V140A140,140,0,0,1,140,0Z" transform="translate(13372 -329)"/>
+    <path id="Path_16" data-name="Path 16" class="cls-1" d="M10554.833-217h627.191" transform="translate(2799.571 198.331)"/>
+    <rect id="Rectangle_42" data-name="Rectangle 42" class="cls-3" width="30" height="276" transform="translate(13467 -157)"/>
+    <rect id="Rectangle_43" data-name="Rectangle 43" class="cls-3" width="29" height="138" transform="translate(13542 -88)"/>
+    <rect id="Rectangle_44" data-name="Rectangle 44" class="cls-3" width="31" height="69" transform="translate(13615 -53)"/>
+    <rect id="Rectangle_45" data-name="Rectangle 45" class="cls-4" width="30" height="276" transform="translate(13868 119) rotate(180)"/>
+    <rect id="Rectangle_46" data-name="Rectangle 46" class="cls-4" width="31" height="139" transform="translate(13794 50) rotate(180)"/>
+    <rect id="Rectangle_47" data-name="Rectangle 47" class="cls-4" width="29" height="69" transform="translate(13719 15) rotate(180)"/>
+    <rect id="Rectangle_51" data-name="Rectangle 51" class="cls-5" width="30" height="554" transform="translate(13394 -296)"/>
+    <rect id="Rectangle_52" data-name="Rectangle 52" class="cls-5" width="30" height="554" transform="translate(13912 -296)"/>
+    <text id="Encoder_1" class="cls-6" transform="translate(13487 12) rotate(-90)"><tspan x="0" y="0">Encoder_1</tspan></text>
+    <text id="Encoder_2" class="cls-6" transform="translate(13560 12) rotate(-90)"><tspan x="0" y="0">Encoder_2</tspan></text>
+    <text id="E_3" class="cls-6" transform="translate(13635 -9) rotate(-90)"><tspan x="0" y="0">E_3</tspan></text>
+    <text id="D_1" class="cls-6" transform="translate(13709 -8) rotate(-90)"><tspan x="0" y="0">D_1</tspan></text>
+    <text id="Decoder_2" class="cls-6" transform="translate(13782 13) rotate(-90)"><tspan x="0" y="0">Decoder_2</tspan></text>
+    <text id="Decoder_3" class="cls-6" transform="translate(13857 12) rotate(-90)"><tspan x="0" y="0">Decoder_3</tspan></text>
+    <text id="Input_Block" class="cls-6" transform="translate(13414 12) rotate(-90)"><tspan x="0" y="0">Input_Block</tspan></text>
+    <text id="Output_Block" class="cls-6" transform="translate(13932 12) rotate(-90)"><tspan x="0" y="0">Output_Block</tspan></text>
+  </g>
+</svg>

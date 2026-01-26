@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="429" height="204" viewBox="0 0 429 204">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #707070;
+      }
+
+      .cls-2 {
+        font-size: 15px;
+      }
+
+      .cls-2, .cls-3 {
+        font-family: HelveticaNeue-Bold, Helvetica Neue;
+        font-weight: 700;
+      }
+
+      .cls-3 {
+        font-size: 16px;
+      }
+
+      .cls-4, .cls-6 {
+        fill: none;
+      }
+
+      .cls-4 {
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-width: 3px;
+      }
+
+      .cls-5 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_61" data-name="Group 61" transform="translate(-746 -1193)">
+    <g id="Rectangle_55" data-name="Rectangle 55" class="cls-1" transform="translate(889 1193)">
+      <rect class="cls-5" width="145" height="72"/>
+      <rect class="cls-6" x="0.5" y="0.5" width="144" height="71"/>
+    </g>
+    <text id="Make_Data" data-name="Make Data" class="cls-2" transform="translate(921 1234)"><tspan x="0" y="0">Make Data</tspan></text>
+    <g id="Rectangle_56" data-name="Rectangle 56" class="cls-1" transform="translate(1030 1325)">
+      <rect class="cls-5" width="145" height="72"/>
+      <rect class="cls-6" x="0.5" y="0.5" width="144" height="71"/>
+    </g>
+    <text id="Train" class="cls-3" transform="translate(1085 1367)"><tspan x="0" y="0">Train</tspan></text>
+    <g id="Rectangle_57" data-name="Rectangle 57" class="cls-1" transform="translate(746 1325)">
+      <rect class="cls-5" width="145" height="72"/>
+      <rect class="cls-6" x="0.5" y="0.5" width="144" height="71"/>
+    </g>
+    <text id="Evaluate" class="cls-2" transform="translate(787 1366)"><tspan x="0" y="0">Evaluate</tspan></text>
+    <g id="Group_17" data-name="Group 17" transform="translate(10347.139 -9024.84) rotate(135)">
+      <path id="Path_17" data-name="Path 17" class="cls-4" d="M13859.116-707.86V-743.7" transform="translate(4 -2)"/>
+      <path id="Path_18" data-name="Path 18" class="cls-4" d="M13877.823-755l-5.878-5.878-5.878,5.878" transform="translate(-9 13)"/>
+    </g>
+    <g id="Group_18" data-name="Group 18" transform="translate(11183.914 10580.325) rotate(-135)">
+      <path id="Path_17-2" data-name="Path 17" class="cls-4" d="M13859.116-707.86V-743.7" transform="translate(4 -2)"/>
+      <path id="Path_18-2" data-name="Path 18" class="cls-4" d="M13877.823-755l-5.878-5.878-5.878,5.878" transform="translate(-9 13)"/>
+    </g>
+    <g id="Group_19" data-name="Group 19" transform="translate(1688.813 15224.076) rotate(-90)">
+      <path id="Path_17-3" data-name="Path 17" class="cls-4" d="M13859.116-707.86V-743.7" transform="translate(4 -2)"/>
+      <path id="Path_18-3" data-name="Path 18" class="cls-4" d="M13877.823-755l-5.878-5.878-5.878,5.878" transform="translate(-9 13)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,205 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ebebeb;
+}
+
+section main {
+  position: relative;
+  width: 100%;
+  cursor: default;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+section main header {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  background-color: #fcfcfc;
+  background-size: 700px;
+  background-size: cover;
+  height: 800px;
+}
+
+section main header .modifier {
+  padding-top: 40px;
+  padding-left: 40px;
+  font-style: italic;
+  padding-bottom: 10px;
+  font-weight: 500;
+  font-size: 35px;
+}
+
+section main .pcb-cover {
+  margin: 0;
+  padding: 0;
+}
+
+section main.active {
+  animation: expand 1s;
+}
+
+section main h1 {
+  padding-left: 40px;
+  font-size: 3em;
+  margin: 0;
+}
+
+section main h3 {
+  margin: 0px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  font-size: 2em;
+  
+}
+
+section main h4 {
+  margin: 0px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  font-size: 1.5em;
+  
+}
+
+section main h5 {
+  font-size: 1em;
+  font-weight: normal;
+  padding-left: 35px;
+  margin-top: 10px;
+  position: absolute;
+  top: 740px;
+}
+
+section main p {
+  margin: 0px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 0.6em;
+  line-height: 1.5em;
+}
+
+section main div {
+  display: flex;
+  justify-content: center;
+}
+
+section main img {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: calc(100% - 80px);
+  width: calc(100% - 80px);
+}
+
+section main audio {
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+section main video {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: calc(100% - 80px);
+  height: calc(100% - 80px);
+}
+
+section main footer {
+  margin-top: 40px;
+  background-color: #c7c7c7;
+  height: 500px;
+  background-size: cover;
+}
+
+section main footer h4 {
+  font-size: 2em;
+}
+
+section main .btn {
+  position: absolute;
+  margin: 40px;
+  margin-bottom: 35px;
+  bottom: 0;
+  left: 0;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 200;
+}
+
+section main .btn img {
+  padding: 20px;
+  border-radius: 13px;
+  height: 25px;
+  width: 25px;
+}
+
+.motor-thumbnail {
+  background-image: url("./assets/HubPost-thumbnail.svg");
+}
+
+.pcb-thumbnail {
+  background-image: url("./assets/PCBPost-thumbnail.svg");
+}
+
+.audio-thumbnail {
+  background-image: url("./assets/AIPost-thumbnail.svg");
+}
+
+@media only screen and (min-width: 500px) {
+  section main p {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+
+  section main {
+    width: 700px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border-radius: 15px;
+  }
+
+  section main header {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  section main p {
+    font-size: 1em;
+  }
+
+  section main footer {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  section main footer .footerPhoto {
+    display: inline;
+    width: 170px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 13px;
+  }
+
+  section main .btn img {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 13px;
+  }
+}
