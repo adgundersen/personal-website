@@ -1,0 +1,130 @@
+#main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EBEBEB;
+}
+
+#main-window {
+  width: 350px;
+  height: 700px;
+  max-width: calc(100% - 40px);
+  max-height: calc(100% - 120px);
+  background-color: #EBEBEB;
+  border-radius: 15px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#main-copyright {
+  font-family: "Compact";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 15px;
+  font-size: 12px;
+  color: #9B9B9B
+}
+
+.note {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #C6C6C6;
+  cursor: pointer;
+}
+
+.note-pulse {
+  animation-name: note-pulse;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes note-pulse {
+  0% {
+    box-shadow: 0 0 0 0.0em rgba(195, 195, 195, 0.8);
+  }
+  30% {
+    box-shadow: 0 0 0 0.4em rgba(195, 195, 195, 0.15);
+  }
+}
+
+.note-info {
+  position: absolute;
+  width: 300px;
+  opacity: 0;
+  font-size: 14px;
+  margin: 0px;
+  padding: 15px;
+  border-radius: 18px;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 3.5px 15px 0px;
+  transform: scale(0.3);
+  display: none;
+}
+
+.note-title {
+  font-family: "Compact";
+}
+
+.note-content {
+  font-family: "Default";
+  margin-top: 8px;
+}
+
+.next-button { 
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  font-family: "Compact";
+  font-size: 12px;
+  color: #58C4FD;
+  background-color: Transparent;
+  cursor: pointer;
+}
+
+#menu {
+  position: fixed;
+  width: 100vw;
+  height: 50px;
+  top: 0;
+}
+
+#logo {
+  margin: 15px;
+}
+
+#menu-right {
+  position: absolute;
+  right: 0;
+}
+
+#gitlab {
+  height: 50px;
+  margin: 5px;
+}
+
+#contact, #download {
+  display: inline-block;  /* anchors can't have paddings by default */
+  font-family: "Compact";
+  font-size: 14px;
+}
+
+#contact {
+  color: #838383;
+}
+
+#download {
+  background-color: #58C4FD;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-left: 10px;
+  color: white;
+}

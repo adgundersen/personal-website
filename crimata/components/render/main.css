@@ -1,0 +1,584 @@
+
+@font-face {
+  font-family: "Default";
+  src: url("assets/fonts/SF-Pro-Text-Regular.otf");
+}
+
+@font-face {
+  font-family: "Compact";
+  src: url("assets/fonts/SF-Compact-Display-Bold.otf");
+}
+
+@font-face {
+  font-family: "Rounded";
+  src: url("assets/fonts/SF-Compact-Rounded-Bold.otf");
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  /*background-color: rgba(235, 235, 235, 0.75);*/
+}
+
+/* The first word of the class is the component that it modifys. */
+
+#splash {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app {
+  position: relative; /* must explicitly be declared */
+  font-family: "Default";
+  -webkit-font-smoothing: antialiased;
+  height: 100%; /* 100% for website */
+  width: 100%; /* 100% for website */
+  border-radius: 15px;
+}
+
+#header-titlebar {
+  position: absolute;
+  width: 100%;
+  height: 54px;
+  opacity: 0.75;
+  background-color: #EBEBEB;
+  -webkit-app-region: drag;
+  border: none;
+  outline: none;
+  z-index: 1;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.contacts {
+  margin: 0;
+  padding: 0;
+  border-radius: inherit;
+  background-color: #DBDBDB;
+}
+
+.contacts > li {
+  padding: 12px;
+  display: flex; 
+}
+
+.contacts img {
+  height: 30px;
+  border-radius: 50%;
+}
+
+.contacts .info {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.contacts .name {
+
+}
+
+.contacts .email {
+  font-family: "Compact";
+  font-size: 12px;
+  color: #898989;
+  overflow: w;
+  word-wrap: break-word;
+}
+
+#header-menu {
+  display: flex;
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 20px;
+  z-index: 2;
+}
+
+.header-menu-button {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  padding: 0; /* https://stackoverflow.com/questions/30552307/ios-safari-buttons-not-perfect-circles */
+}
+
+.header-exit-button {
+  background-color: #FF6157;
+}
+
+.header-exit-button:active {
+  background: #c14645;
+}
+
+.header-min-button {
+  background-color: #FFC12F;
+  margin-left: 8px;
+}
+
+.header-min-button:active {
+  background-color: #c08e38;
+}
+
+#login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#messenger {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+/* hide native scrollbar */
+#messenger::-webkit-scrollbar {
+  display: none;
+}
+
+#ws {
+  position: absolute;
+  width: 100%;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+#ws-logo {
+  transition: all 0.5s;
+}
+
+#ws-logo.move {
+  transform: translateX(15px);
+}
+
+#ws-dots {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+#ws-dots.move {
+  opacity: 1;
+  transform: translateX(-15px);
+}
+
+.ws-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #48E065;
+  position: relative;
+  transform: translateX(-15px);
+  animation: ws-dot-flashing 1s infinite linear alternate;
+  animation-delay: .25s;
+}
+
+.ws-dot::before, .ws-dot::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+}
+
+.ws-dot::before {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #48E065;
+  left: -9px;
+  animation: ws-dot-flashing 1s infinite alternate;
+  animation-delay: 0s;
+}
+
+.ws-dot::after {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #48E065;
+  left: 9px;
+  animation: ws-dot-flashing 1s infinite alternate;
+  animation-delay: 0.5s;
+}
+
+@keyframes ws-dot-flashing {
+  0% {
+    background-color: #48E065;
+  }
+  50%,
+  100% {
+    background-color: #9B9B9B;
+  }
+}
+
+#input {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  z-index: 3;
+  /* To prevent window drag when overlapping with titlebar. */
+  -webkit-app-region: no-drag;
+  border-radius: 50%;
+  /* Set opacity here to not affect child. */
+  background-color: rgba(235, 235, 235, 0.75);
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+}
+
+#input-text {
+  position: absolute;
+  min-width: 150px;
+  height: 16px;
+  border-radius: 18px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  pointer-events: none;
+  background-color: white;
+  z-index: -1;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+  transform-origin: center;
+  opacity: 0;
+  transform: translateX(70%);
+  transition: all 0.5s;
+}
+
+#input-text.show {
+  opacity: 1;
+}
+
+#input-text.leftSide {
+  transform: translateX(-70%);
+}
+
+#settings {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(235, 235, 235, 0.75);
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation-name: settings-appear;
+  animation-duration: 0.5s;
+  border-radius: inherit;
+}
+
+@keyframes settings-appear {
+  from {
+    background-color: rgba(235, 235, 235, 0);
+  }
+  to {
+    background-color: rgba(235, 235, 235, 0.75);
+  }
+}
+
+.settings-icon {
+  position: absolute;
+  right: 0;
+  border: none;
+  outline: none;
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  margin-right: 20px;
+  margin-top: 19px;
+  z-index: 2;
+  background-color: Transparent;
+}
+
+.settings-icon:hover {
+  cursor: pointer;
+}
+
+.settings-account {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.settings-logout-button {
+  font-family: "Compact";
+  background-color: #B7B7B7;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.settings-logout-button:hover {
+  cursor: pointer;
+}
+
+.settings-version {
+  position: absolute;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  font-weight: bold;
+  color: #575757;
+}
+
+.message {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  animation-name: message-init-anim;
+  animation-duration: 0.25s;
+}
+
+@keyframes message-init-anim {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+
+.message:first-child {
+  margin-top: 55px;
+}
+
+.message:last-child {
+  margin-bottom: 6px;
+}
+
+.message-session {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Compact";
+  font-size: 12px;
+  color: #9B9B9B;
+  margin-bottom: 18px;
+}
+
+.client-message {
+  align-items: flex-end;
+}
+
+.ai-message {
+  align-items: flex-start;
+}
+
+.admin-message {
+  align-items: center;
+}
+
+.bubble {
+  position: relative;
+  max-width: 66%;
+  font-size: 14px;
+  border-radius: 18px;
+  margin-bottom: 4px;
+  overflow-wrap: break-word;
+}
+
+.bubble-notify {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #58D9FF;
+  top: -5px;
+  left: -5px;
+  border: 2px solid #EBEBEB;
+  transform: scale(0);
+  animation-name: bubble-notify-anim;
+  animation-duration: 5s;
+}
+
+@keyframes bubble-notify-anim {
+  0%, 90% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.ai-bubble {
+  background-color: #FFFFFF;
+  margin-left: 15px;
+}
+
+.client-bubble {
+  color: white;
+  background-color: #58C4FD;
+  margin-right: 15px;
+}
+
+.ai-first-child {
+  border-bottom-left-radius: 9px;
+}
+
+.ai-middle-child {
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
+}
+
+.ai-last-child {
+  border-top-left-radius: 9px;
+}
+
+.client-first-child {
+  border-bottom-right-radius: 9px;
+}
+
+.client-middle-child {
+  border-top-right-radius: 9px;
+  border-bottom-right-radius: 9px;
+}
+
+.client-last-child {
+  border-top-right-radius: 9px;
+}
+
+.bubble > p {
+  margin: 0px;
+  padding: 10px;
+}
+
+.bubble > div {
+  border-radius: inherit;
+}
+
+.bubble > img {
+  border-radius: inherit;
+  display: block;
+  max-width: 100%;
+}
+
+.bubble a {
+  display: inline-block;
+  font-family: "Rounded";
+  text-decoration: none;
+  border-radius: inherit;
+  background-color: #D9D9D9;
+  padding: 10px;
+  color: #727272;
+}
+
+.context {
+  position: relative;
+  min-height: 14px;
+  display: flex;
+  align-items: center;
+  font-family: "Compact";
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.ai-context {
+  margin-left: 15px;
+}
+
+.client-context {
+  margin-right: 15px;
+}
+
+.context-avatar {
+  margin-right: 5px;
+  border-radius: 50%;
+  height: 30px;
+}
+
+/* ---------- shared between components ---------- */
+
+.button {
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+/*.button:hover {
+  cursor: pointer;
+}*/
+
+/* shake a div to signal error*/
+.shake {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.audio {
+  animation-name: audio-anim;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes audio-anim {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0.4em rgba(195, 195, 195, 0.4), 0 0 0 0.25em rgba(195, 195, 195, 0.15);
+  }
+  25% {
+    box-shadow: 0 0 0 0.15em rgba(195, 195, 195, 0.15), 0 0 0 0.4em rgba(195, 195, 195, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 0.55em rgba(195, 195, 195, 0.55), 0 0 0 0.15em rgba(195, 195, 195, 0.05);
+  }
+  75% {
+    box-shadow: 0 0 0 0.25em rgba(195, 195, 195, 0.25), 0 0 0 0.55em rgba(195, 195, 195, 0.45);
+  }
+}
+
+.smart-form {
+  width: 225px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.text-field {
+  width: 100%;
+  padding: 16px;
+  background: none;
+  border: none;
+  margin: 4px;
+  font-size: 14px;
+  border-radius: 10px;
+  background-color: #d1d1d1;
+  outline: none;
+}
+
+.smart-form-logs {
+  font-family: "Compact";
+  font-size: 12px;
+  text-align: left;
+  margin-left: 10px;
+}
