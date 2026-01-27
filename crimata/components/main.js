@@ -63,7 +63,7 @@ const Main =
 
         <Note v-for="note in notes" v-bind="note" />
 
-        <div id="main-copyright">Crimata Technologies 2023</div>`
+        <div id="main-copyright">Crimata Technologies 2022</div>`
 }
 
 export default Main;
